@@ -1,5 +1,7 @@
 # Pročitaj uputstvo
 
+<img src="http://i.pics.rs/G9NxG" alt="" class="img-thumbnail" />
+
 Tema je rađena po ugledu na Flarum, koji je još u fazi izrade, za izgled teme je korišten Bootstrap. Da bi vam tema radila kako treba i imala sve funkcije koje koristimo na ovom forumu potrebno je da pratite sledeće uputstvo.
 
 Za početak je potrebno da instalirate bbPress dodatak za WordPress ukoliko to već niste uradili, i da u podešavanja foruma podesite kao na slikama ispod:
