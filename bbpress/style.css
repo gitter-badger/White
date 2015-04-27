@@ -44,6 +44,16 @@ a:focus {
     text-decoration: none;
 }
 
+pre {
+border-color:#ECF1F8;
+background-color:#ECF1F8;
+color:#8FA2BC;
+}
+
+pre:hover {
+background-color:#fff;
+}
+
 @media (max-width: 1200px) { 
     #nazad { margin-left: 15px; } 
 }
