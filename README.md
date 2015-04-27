@@ -19,4 +19,4 @@ To je nešto sto se tiče stavki koje koristimo na forum, dodatke koji morate in
 
 Ovo je jako bitno zbog zabrane pristupa drugim korisnicima <strong>/wp-admin</strong> i kad se vaši korisnici loguju da ih automacki prebaci na <strong>/forum</strong>
 
-Što se tiče teme <strong>bbpress</strong> folder iz nju uploadujete u direktorijumu teme koju koristite. Tako da putanja do nje bude u <strong>wp-content/themes/vasa-tema/bbpress/</strong> 
+Što se tiče teme <strong>bbpress</strong> folder iz nje uploadujete u direktorijumu teme koju koristite. Tako da putanja do nje bude u <strong>wp-content/themes/vasa-tema/bbpress/</strong> 
