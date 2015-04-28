@@ -12,7 +12,6 @@ Text Domain: limun
 */
 @import url(css/bootstrap.css);
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,600,400&subset=latin,cyrillic);
-.modal-backdrop { background-color: #355B8E }
 html,
 body {
     font-family: 'Open Sans', sans-serif;
@@ -257,6 +256,9 @@ a.favorite-toggle { font-size: 0px }
     text-decoration: inherit;
     font-size: 14px;
 }
+#bbp_topic_title::-webkit-input-placeholder, #bbp_forum_id, #bbp_stick_topic_select, #bbp_topic_status_select {
+  color: #8FA2BC;
+}
 .new-topic-notifier {
     display: inline;
     padding: 2px 10px;
@@ -270,4 +272,4 @@ a.favorite-toggle { font-size: 0px }
     vertical-align: baseline;
     border-radius: 4px;
 }
-
+.modal-backdrop { background-color: #355B8E; }

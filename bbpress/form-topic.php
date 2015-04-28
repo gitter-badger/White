@@ -10,33 +10,22 @@
 ?>
 
 <?php if ( !bbp_is_single_forum() ) : ?>
-
 <div id="bbpress-forums">
-
 <?php endif; ?>
 
 <?php if ( bbp_is_topic_edit() ) : ?>
-
-	<?php bbp_topic_tag_list( bbp_get_topic_id() ); ?>
-
-
+<?php bbp_topic_tag_list( bbp_get_topic_id() ); ?>
 <?php endif; ?>
-
 
 <?php if ( is_user_logged_in() ) : ?>
-	<div id="new-topic-<?php bbp_topic_id(); ?>" class="bbp-topic-form">
+<div id="new-topic-<?php bbp_topic_id(); ?>" class="bbp-topic-form">
 <?php if ( bbp_is_topic_edit() ) : ?>
-		<form id="new-post1" name="new-post" method="post" action="<?php the_permalink(); ?>">
-
+<form id="new-post1" name="new-post" method="post" action="<?php the_permalink(); ?>">
 <?php else : ?>
-		<form id="new-post" name="new-post" method="post" action="<?php the_permalink(); ?>">
-
+<form id="new-post" name="new-post" method="post" action="<?php the_permalink(); ?>">
 <?php endif; ?>
-			<?php do_action( 'bbp_theme_before_topic_form' ); ?>
-
-			<fieldset class="bbp-form">
-		
-
+<?php do_action( 'bbp_theme_before_topic_form' ); ?>
+<fieldset class="bbp-form">
 				<?php do_action( 'bbp_theme_before_topic_form_notices' ); ?>
 
 				<?php if ( !bbp_is_topic_edit() && bbp_is_forum_closed() ) : ?>
@@ -64,8 +53,7 @@
 					<?php do_action( 'bbp_theme_before_topic_form_title' ); ?>
 
 					<p>
-						<label for="bbp_topic_title"><?php printf( __( 'Topic Title (Maximum Length: %d):', 'bbpress' ), bbp_get_title_max_length() ); ?></label><br />
-						<input style="border:1px solid #ECF1F8;padding:6px 12px;border-radius:4px;" type="text" id="bbp_topic_title" value="<?php bbp_form_topic_title(); ?>" tabindex="<?php bbp_tab_index(); ?>" size="70" name="bbp_topic_title" maxlength="<?php bbp_title_max_length(); ?>" />
+						<input style="border:1px solid #ECF1F8;padding:6px 12px;border-radius:4px;" type="text" id="bbp_topic_title" placeholder="<?php printf( __( 'Naslov teme', 'bbpress' ), bbp_get_title_max_length() ); ?>" value="<?php bbp_form_topic_title(); ?>" tabindex="<?php bbp_tab_index(); ?>" size="50" name="bbp_topic_title" maxlength="<?php bbp_title_max_length(); ?>" />
 
 					<?php if ( !bbp_is_single_forum() ) : ?>
 
