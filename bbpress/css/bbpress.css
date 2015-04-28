@@ -668,8 +668,18 @@ textarea#bbp_forum_content {
 /**
  * Fix for too-long forum names, usually from conversion
  */
-#bbpress-forums fieldset select#bbp_forum_id {
+#bbpress-forums fieldset select#bbp_forum_id,#bbp_stick_topic_select,#bbp_topic_status_select {
 	max-width: 200px;
+        border:1px solid #ECF1F8;
+        padding:6px 12px;
+        border-radius:4px;
+}
+
+#bbpress-forums fieldset select#bbp_stick_topic_select {
+	max-width: 200px;
+        border:1px solid #ECF1F8;
+        padding:6px 12px;
+        border-radius:4px;
 }
 
 .bbp-topic-form,

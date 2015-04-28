@@ -66,6 +66,21 @@
 					<p>
 						<label for="bbp_topic_title"><?php printf( __( 'Topic Title (Maximum Length: %d):', 'bbpress' ), bbp_get_title_max_length() ); ?></label><br />
 						<input style="border:1px solid #ECF1F8;padding:6px 12px;border-radius:4px;" type="text" id="bbp_topic_title" value="<?php bbp_form_topic_title(); ?>" tabindex="<?php bbp_tab_index(); ?>" size="70" name="bbp_topic_title" maxlength="<?php bbp_title_max_length(); ?>" />
+
+					<?php if ( !bbp_is_single_forum() ) : ?>
+
+						<?php do_action( 'bbp_theme_before_topic_form_forum' ); ?>
+					
+							<?php
+								bbp_dropdown( array(
+									'selected'  => bbp_get_form_topic_forum()
+								) );
+							?>
+					
+
+						<?php do_action( 'bbp_theme_after_topic_form_forum' ); ?>
+
+					<?php endif; ?>
 					</p>
 
 					<?php do_action( 'bbp_theme_after_topic_form_title' ); ?>
@@ -98,22 +113,7 @@
 
 					<?php endif; ?>
 
-					<?php if ( !bbp_is_single_forum() ) : ?>
 
-						<?php do_action( 'bbp_theme_before_topic_form_forum' ); ?>
-
-						<p>
-							<label for="bbp_forum_id"><?php _e( 'Forum:', 'bbpress' ); ?></label><br />
-							<?php
-								bbp_dropdown( array(
-									'selected'  => bbp_get_form_topic_forum()
-								) );
-							?>
-						</p>
-
-						<?php do_action( 'bbp_theme_after_topic_form_forum' ); ?>
-
-					<?php endif; ?>
 
 					<?php if ( current_user_can( 'moderate' ) ) : ?>
 
