@@ -9,9 +9,10 @@
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/bbpress/style.css" type="text/css" media="screen">
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
 <?php wp_head(); ?>
 </head>
-<body <?php body_class(); ?>>
+<body>
 <nav class="navbar navbar-default navbar-fixed-top">
 <div class="container">
 <div class="navbar-header">
@@ -155,7 +156,6 @@
 </div>
 </div>
 <?php endif; ?>
-<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <script type="text/javascript">
 $(document).ready(
