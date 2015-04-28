@@ -183,6 +183,8 @@ $('[data-toggle="tooltip"]').tooltip()
 <style>
 .quicktags-toolbar{ border-bottom:none;background:#ECF1F8;border-top:1px solid #ECF1F8;border-left:1px solid #ECF1F8;border-right:1px solid #ECF1F8; }
 .wp-editor-area { border:1px solid #ECF1F8; }
+#wp-bbp_reply_content-editor-container .button { background-color: #fff; color: #444; border-color: #ECF1F8; border-radius:4px; }
+#wp-bbp_reply_content-editor-container .button:hover { background-color: #fff; color: #355B8E; border-color: #ECF1F8; border-radius:4px; }
 #wp-bbp_topic_content-editor-container .button { background-color: #fff; color: #444; border-color: #ECF1F8; border-radius:4px; }
 #wp-bbp_topic_content-editor-container .button:hover { background-color: #fff; color: #355B8E; border-color: #ECF1F8; border-radius:4px; }
 </style>
