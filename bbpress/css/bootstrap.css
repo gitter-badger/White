@@ -2559,7 +2559,9 @@ output {
   border-color: #ECF1F8;
   background-color: #fff;
   outline: 0;
-
+}
+.form-control:hover {
+  background-color: #fff;
 }
 .form-control::-moz-placeholder {
   color: #8FA2BC;
