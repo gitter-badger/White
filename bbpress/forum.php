@@ -23,7 +23,7 @@
 <a class="navbar-brand animated fadeInDown" id="limun" href="<?php echo esc_url(home_url()); ?>/forum" title="<?php bloginfo('description'); ?>"><?php bloginfo('name'); ?> Forum</a>
 </div>
 <div class="collapse navbar-collapse" id="meni">
-<ul class="nav navbar-nav hidden-lg hidden-sm">
+<ul class="nav navbar-nav hidden-lg hidden-md">
 <?php if (is_user_logged_in()) : ?>
 <a href="#new-post" class="zapocni btn navbar-btn pull-left btn-success" style="margin-left:15px;margin-right:15px;">Započni temu</a>
 <a href="<?php echo bbp_get_user_profile_url( get_current_user_id() ); ?>edit/" class="navbar-btn pull-left navbar-gravatar"><?php global $current_user; get_currentuserinfo(); echo get_avatar($current_user->user_email, 32 ); ?></a>
