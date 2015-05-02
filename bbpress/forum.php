@@ -8,7 +8,8 @@
 <meta name="revisit-after" content="1 days">
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/bbpress/style.css" type="text/css" media="screen">
-<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
 <?php wp_head(); ?>
 </head>
@@ -23,25 +24,14 @@
 <a class="navbar-brand animated fadeInDown" id="limun" href="<?php echo esc_url(home_url()); ?>/forum" title="<?php bloginfo('description'); ?>"><?php bloginfo('name'); ?> Forum</a>
 </div>
 <div class="collapse navbar-collapse" id="meni">
-<ul class="nav navbar-nav hidden-lg hidden-md">
-<?php if (is_user_logged_in()) : ?>
-<a href="#new-post" class="zapocni btn navbar-btn pull-left btn-success" style="margin-left:15px;margin-right:15px;">Započni temu</a>
-<a href="<?php echo bbp_get_user_profile_url( get_current_user_id() ); ?>edit/" class="navbar-btn pull-left navbar-gravatar"><?php global $current_user; get_currentuserinfo(); echo get_avatar($current_user->user_email, 32 ); ?></a>
-<?php else : ?>
-<div class="btn-group pull-left navbar-btn" style="margin-left:15px;">
-<a class="btn btn-default" href="" data-toggle="modal" data-target="#prijava">Prijava</a>
-<a class="btn btn-success" href="" data-toggle="modal" data-target="#registracija">Registracija</a>
-</div>
-<?php endif; ?>
-</ul>
-<ul class="nav navbar-nav pull-right hidden-xs hidden-sm">
-<form role="search" method="get" id="bbp-searchform" action="<?php echo esc_url( home_url( 'forum/' ) ); ?>" class="navbar-form  navbar-left">
+<ul class="nav navbar-nav pull-right">
+<form role="search" method="get" id="bbp-searchform" action="<?php echo esc_url( home_url( 'forum/' ) ); ?>" class="navbar-form navbar-left hidden-xs hidden-sm">
 <div class="form-group has-feedback has-feedback-left">
 <input data-toggle="tooltip" data-placement="bottom" title="Pronađite željenu temu" type="text" name="ts" id="ts" class="form-control" placeholder="Pretraga...">
 <span class="fa fa-search form-control-feedback" aria-hidden="true"></span>
 </div>
 </form>
-<div class="btn-group navbar-left" role="group">
+<div class="btn-group navbar-left hidden-xs hidden-sm" role="group">
 <button type="button" class="btn navbar-btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-bars"></i></button>
 <ul class="dropdown-menu dropdown-menu-right" role="menu">
 <li<?php if (is_single('generalno')) { echo ' class="active"'; } ?>><a href="<?php echo esc_url(home_url()); ?>/generalno"><i class="fa fa-desktop"></i> Generalno</a></li>
@@ -50,10 +40,11 @@
 </ul>
 </div>
 <?php if (is_user_logged_in()) : ?>
-<li class="dropdown navbar-right">
+<a href="#new-post" class="zapocni btn navbar-btn navbar-right btn-success hidden-lg hidden-md">Započni temu</a>
+<li class="dropdown pull-right">
 <a href="#" class="dropdown-toggle navbar-gravatar" data-toggle="dropdown"> <?php global $current_user; get_currentuserinfo(); echo get_avatar($current_user->user_email, 32 ); ?></a>
 <ul class="dropdown-menu" role="menu" >
-<li><a href="<?php echo bbp_get_user_profile_url( get_current_user_id() ); ?>edit/"><i class="fa fa-pencil-square-o"></i> Izmeni profil</a></li>
+<li <?php if (bbp_is_single_user_edit()) { echo ' class="active"'; } ?>><a href="<?php echo bbp_get_user_profile_url( get_current_user_id() ); ?>edit/"><i class="fa fa-pencil-square-o"></i> Izmeni profil</a></li>
 <li><a href="<?php echo bbp_get_user_profile_url( get_current_user_id() ); ?>edit/#user_login"><i class="fa fa-lock"></i> Izmeni lozinku</a></li>
 <li class="divider"></li>
 <li><a href="<?php echo wp_logout_url(); ?>"><i class="fa fa-sign-out"></i> Odjavi se</a></li>
@@ -69,6 +60,27 @@
 </div>
 </div>
 </nav>
+<?php if (bbp_is_user_home() == bbp_is_favorites_active() || bbp_is_single_user_profile() || bbp_is_single_user_topics() || bbp_is_single_user_replies() || bbp_is_single_user_edit()) : ?>
+<div class="korisnik">
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+<div class="pull-left" style="margin-right:25px;">
+<a class="img-responsive" href="<?php bbp_user_profile_url(); ?>" title="<?php bbp_displayed_user_field( 'display_name' ); ?>" rel="me">
+<?php echo get_avatar( bbp_get_displayed_user_field( 'user_email', 'raw' ), apply_filters( 'bbp_single_user_details_avatar_size', 100 ) ); ?>
+</a>
+</div>
+
+<bottom class="btn btn-danger pull-right" style="margin-top:10px;">
+<?php  printf( __( '%s', 'bbpress' ), bbp_get_user_display_role()    ); ?>
+</bottom>
+<h1><?php bbp_displayed_user_field( 'display_name' ); ?></h1>
+<?php bbp_displayed_user_field( 'description' ); ?>
+</div>
+</div>
+</div>
+</div>
+<?php endif; ?>
 <?php if (is_single()) : ?>
 <div class="header">
 <div class="container">
@@ -86,7 +98,7 @@
 <div class="col-md-2">
 <ul class="nav-pills nav-stacked hidden-xs hidden-sm" data-spy="affix">
 <?php if ( is_user_logged_in() ) : ?>
-<a href="#new-post" class="zapocni btn btn-success">Započni temu</a>
+<a href="#new-post" class="zapocni btn btn-success btn-block">Započni temu</a>
 <?php endif; ?>
 <li <?php if ( is_archive('forum')) { echo ' class="active"'; } ?>><a href="<?php echo esc_url(home_url()); ?>/forum"><i class="fa fa-comments-o"></i> Poslednje teme</a></li>
 <li <?php if ( bbp_is_single_view()) { echo ' class="active"'; } ?>><a href="<?php echo esc_url(home_url()); ?>/forum/pregled/no-replies/"><i class="fa fa-comment-o"></i> Neodgovorene</a></li>
@@ -131,7 +143,7 @@
 </div> 
 <div class="modal fade" id="registracija" tabindex="-1" role="dialog" aria-labelledby="registracija" aria-hidden="true">
 <div class="modal-dialog modal-sm">
-<div class="modal-content text-center">
+<div class="modal-content text-center" style="width:335px;">
 <div class="modal-header">
 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 <h4 class="modal-title" id="registracija">Registruj se</h4>
