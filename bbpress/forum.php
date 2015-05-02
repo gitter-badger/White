@@ -8,6 +8,7 @@
 <meta name="revisit-after" content="1 days">
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/bbpress/style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/bbpress/css/bbpress.css" type="text/css" media="screen">
 <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
