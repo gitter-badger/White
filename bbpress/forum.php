@@ -111,7 +111,7 @@
 <?php else : ?>
 <div class="col-md-12"><article><?php the_content(); ?></article></div>
 <?php endif; ?>
-<div class="col-md-12"><div class="copyright text-right"><a href="<?php echo esc_url(home_url()); ?>/forum" title="Powered by bbPress">Powered by bbPress</a></div></div>
+<div class="col-md-12"><div class="copyright text-right"><a href="http://www.sceko.com/" target="_blank" title="Izrada sajtova">Created by Sceko</a></div></div>
 </div>
 <?php if (is_user_logged_in()) : ?>
 <?php else : ?>
