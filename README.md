@@ -3,10 +3,8 @@
 1) First download teme from https://github.com/Sceko/White/archive/master.zip
 2) After upload bbPress folder in your WordPress teme like /wp-content/themes/your-teme/[here]
 3) Now u most install plugin https://wordpress.org/plugins/bbpress-loadmore-topics/
-
 4) Change from /wp-admin/options-general.php?page=bbpress Forum Root to <strong>forum</strong> and Forum root should show to <strong>Topics by Freshness</strong> 
 5) And last add this in your functions.php
-
 <pre>
 show_admin_bar(false);
  
