@@ -26,34 +26,35 @@
 <div class="collapse navbar-collapse" id="meni">
 <?php if (is_user_logged_in()) : ?>
 <ul class="nav navbar-nav pull-right">
-<a href="#new-post" class="zapocni btn navbar-btn navbar-right btn-success hidden-lg hidden-md">Start a Discussion</a>
+<a href="#new-post" class="zapocni btn navbar-btn navbar-right btn-success hidden-lg hidden-md">Započni temu</a>
 <li class="dropdown pull-right">
 <a href="#" class="dropdown-toggle navbar-gravatar" data-toggle="dropdown"> <?php global $current_user; get_currentuserinfo(); echo get_avatar($current_user->user_email, 32 ); ?></a>
 <ul class="dropdown-menu" role="menu" >
-<li <?php if (bbp_is_single_user_edit()) { echo ' class="active"'; } ?>><a href="<?php echo bbp_get_user_profile_url( get_current_user_id() ); ?>edit/"><i class="fa fa-pencil-square-o"></i> Edit profile</a></li>
-<li><a href="<?php echo bbp_get_user_profile_url( get_current_user_id() ); ?>edit/#user_login"><i class="fa fa-lock"></i> Change Password</a></li>
+<li <?php if (bbp_is_single_user_edit()) { echo ' class="active"'; } ?>><a href="<?php echo bbp_get_user_profile_url( get_current_user_id() ); ?>edit/"><i class="fa fa-pencil-square-o"></i> Izmeni profil</a></li>
+<li><a href="<?php echo bbp_get_user_profile_url( get_current_user_id() ); ?>edit/#user_login"><i class="fa fa-lock"></i> Izmeni lozinku</a></li>
 <li class="divider"></li>
-<li><a href="<?php echo wp_logout_url(); ?>"><i class="fa fa-sign-out"></i> Logout</a></li>
+<li><a href="<?php echo wp_logout_url(); ?>"><i class="fa fa-sign-out"></i> Odjavi se</a></li>
 </ul>
 </li>
 </ul>
 <?php else : ?>
 <div class="btn-group pull-right navbar-btn" style="margin-left:15px;">
-<a class="btn btn-default" href="" data-toggle="modal" data-target="#prijava">Login</a>
-<a class="btn btn-success" href="" data-toggle="modal" data-target="#registracija">Registration</a>
+<a class="btn btn-default" href="" data-toggle="modal" data-target="#prijava">Prijava</a>
+<a class="btn btn-success" href="" data-toggle="modal" data-target="#registracija">Registracija</a>
 </div>
 <?php endif; ?>
+
 <div class="btn-group pull-right hidden-xs hidden-sm" role="group">
 <button type="button" class="btn navbar-btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-bars"></i></button>
 <ul class="dropdown-menu dropdown-menu-right" role="menu">
-<li<?php if (is_single('generalno')) { echo ' class="active"'; } ?>><a href="<?php echo esc_url(home_url()); ?>/general"><i class="fa fa-desktop"></i> General</a></li>
+<li<?php if (is_single('generalno')) { echo ' class="active"'; } ?>><a href="<?php echo esc_url(home_url()); ?>/generalno"><i class="fa fa-desktop"></i> Generalno</a></li>
 <li class="divider"></li>
-<li<?php if (is_single('pomoc')) { echo ' class="active"'; } ?>><a href="<?php echo esc_url(home_url()); ?>/help"><i class="fa fa-life-ring"></i> Help</a></li>
+<li<?php if (is_single('pomoc')) { echo ' class="active"'; } ?>><a href="<?php echo esc_url(home_url()); ?>/pomoc"><i class="fa fa-life-ring"></i> Pomoć</a></li>
 </ul>
 </div>
 <form role="search" method="get" id="bbp-searchform" action="<?php echo esc_url( home_url( 'forum/' ) ); ?>" class="navbar-form pull-right hidden-xs hidden-sm">
 <div class="form-group has-feedback has-feedback-left">
-<input data-toggle="tooltip" data-placement="bottom" title="Enter topic for search" type="text" name="ts" id="ts" class="form-control" placeholder="Search Forum...">
+<input data-toggle="tooltip" data-placement="bottom" title="Pronađite željenu temu" type="text" name="ts" id="ts" class="form-control" placeholder="Pretraga...">
 <span class="fa fa-search form-control-feedback" aria-hidden="true"></span>
 </div>
 </form>
@@ -97,11 +98,11 @@
 <div class="col-md-2">
 <ul class="nav-pills nav-stacked hidden-xs hidden-sm" data-spy="affix">
 <?php if ( is_user_logged_in() ) : ?>
-<a href="#new-post" class="zapocni btn btn-success btn-block">Start a Discussion</a>
+<a href="#new-post" class="zapocni btn btn-success btn-block">Započni temu</a>
 <?php endif; ?>
-<li <?php if ( is_archive('forum')) { echo ' class="active"'; } ?>><a href="<?php echo esc_url(home_url()); ?>/forum"><i class="fa fa-comments-o"></i> All Discussions</a></li>
-<li <?php if ( bbp_is_single_view()) { echo ' class="active"'; } ?>><a href="<?php echo esc_url(home_url()); ?>/forum/view/no-replies/"><i class="fa fa-comment-o"></i> Unanswered</a></li>
-<li><a href="<?php echo bbp_get_user_profile_url( get_current_user_id() ); ?>favorites/" class="hidden-xs hidden-sm"><i class="fa fa-star"></i> Following</a></li>
+<li <?php if ( is_archive('forum')) { echo ' class="active"'; } ?>><a href="<?php echo esc_url(home_url()); ?>/forum"><i class="fa fa-comments-o"></i> Poslednje teme</a></li>
+<li <?php if ( bbp_is_single_view()) { echo ' class="active"'; } ?>><a href="<?php echo esc_url(home_url()); ?>/forum/pregled/no-replies/"><i class="fa fa-comment-o"></i> Neodgovorene</a></li>
+<li><a href="<?php echo bbp_get_user_profile_url( get_current_user_id() ); ?>omiljene/" class="hidden-xs hidden-sm"><i class="fa fa-star"></i> Omiljene teme</a></li>
 </ul>
 </div>
 <div class="col-md-10">
@@ -110,7 +111,7 @@
 <?php else : ?>
 <div class="col-md-12"><?php the_content(); ?></div>
 <?php endif; ?>
-<div class="col-md-12"><div class="copyright text-right"><a href="http://www.sceko.com/" target="_blank" title="Izrada sajtova">Created by Sceko</a></div></div>
+<div class="col-md-12"><div class="copyright text-right"><a href="<?php echo esc_url(home_url()); ?>/forum" title="Powered by bbPress">Powered by bbPress</a></div></div>
 </div>
 </div>
 <?php if (is_user_logged_in()) : ?>
@@ -120,21 +121,21 @@
 <div class="modal-content text-center">
 <div class="modal-header">
 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-<h4 class="modal-title text-center">Login in</h4>
+<h4 class="modal-title text-center">Prijavi se</h4>
 </div>
 <div class="modal-body">
 <form name="login-form" role="form" action="<?php echo site_url( 'wp-login.php', 'login_post' ) ?>" method="post">
 <div class="form-group">
-<input type="text" name="log" class="form-control" placeholder="Username">
+<input type="text" name="log" class="form-control" placeholder="Korisničko ime">
 </div>
 <div class="form-group">
-<input type="password" name="pwd" class="form-control" placeholder="Password">
+<input type="password" name="pwd" class="form-control" placeholder="Lozinka">
 </div>
 <p>
-<a href="<?php echo wp_lostpassword_url(); ?>" title="Zaboravili ste lozinku?">Forgot your password?</a>
+<a href="<?php echo wp_lostpassword_url(); ?>" title="Zaboravili ste lozinku?">Zaboravili ste lozinku?</a>
 </p>
 <div class="form-group">
-<button type="submit" name="wp-submit" style="width:100%;" class="btn btn-primary">Login</button>
+<button type="submit" name="wp-submit" style="width:100%;" class="btn btn-primary">Prijava</button>
 </div>
 </form>
 </div>
@@ -146,18 +147,18 @@
 <div class="modal-content text-center" style="width:335px;">
 <div class="modal-header">
 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-<h4 class="modal-title">Register</h4>
+<h4 class="modal-title">Registruj se</h4>
 </div>
 <div class="modal-body">
 <form name="login-form" role="form" action="<?php echo site_url('wp-login.php?action=register', 'login_post') ?>" method="post">
 <div class="form-group">
-<input type="text" name="user_login" class="form-control" placeholder="Username">
+<input type="text" name="user_login" class="form-control" placeholder="Korisničko ime">
 </div>
 <div class="form-group">
-<input type="text" name="user_email" class="form-control" placeholder="E-mail">
+<input type="text" name="user_email" class="form-control" placeholder="E-pošta">
 </div>
-<div class="bbp-template-notice"><p>The password will be sent to you.</p></div>
-<button type="submit" name="user-submit" style="width:100%;" class="btn btn-primary">Complete registration</button>
+<div class="bbp-template-notice"><p>Lozinka će vam biti poslata.</p></div>
+<button type="submit" name="user-submit" style="width:100%;" class="btn btn-primary">Završi registraciju</button>
 <input type="hidden" name="redirect_to" value="<?php echo $_SERVER['REQUEST_URI']; ?>?register=true" />
 <input type="hidden" name="user-cookie" value="1">
 </form>

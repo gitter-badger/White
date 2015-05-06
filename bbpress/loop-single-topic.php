@@ -28,13 +28,13 @@
 </header>
 </div>
 <div class="autor">
-<span style="font-weight:600;"><?php bbp_author_link( array( 'post_id' => bbp_get_topic_last_active_id(), 'show_role' => false, 'type' => 'name' ) ); ?></span> replied <?php bbp_topic_freshness_link(); ?> 
+<span style="font-weight:600;"><?php bbp_author_link( array( 'post_id' => bbp_get_topic_last_active_id(), 'show_role' => false, 'type' => 'name' ) ); ?></span> pre <?php bbp_topic_freshness_link(); ?> 
 </div>
 </div>
 <div class="col-md-2">
 <div class="pull-right text-center hidden-xs hidden-sm">
 <span class="broj"><?php bbp_show_lead_topic() ? bbp_topic_reply_count() : bbp_topic_post_count(); ?></span>
-<p class="odgovora">replies</p>
+<p class="odgovora">odgovora</p>
 </div>
 </div>
 </div>

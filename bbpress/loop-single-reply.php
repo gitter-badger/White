@@ -19,13 +19,13 @@
 <?php if ( is_user_logged_in() ) : ?>
 <div class="pull-right">
 <?php if ( bbp_is_topic(bbp_get_reply_id()) ) : ?>
-<bottom data-toggle="tooltip" data-placement="bottom" title="Reply to topic" class="btn btn-default"><?php echo bbp_get_topic_reply_link(); ?></bottom>
+<bottom data-toggle="tooltip" data-placement="bottom" title="Odgovorite na temu" class="btn btn-default"><?php echo bbp_get_topic_reply_link(); ?></bottom>
 <?php endif; ?>
 <?php if ( bbp_is_reply(bbp_get_reply_id()) ) : ?>
-<bottom data-toggle="tooltip" data-placement="bottom" title="Reply to comment" class="btn btn-default"><?php echo bbp_get_reply_to_link(); ?></bottom>
+<bottom data-toggle="tooltip" data-placement="bottom" title="Odgovorite na komentar" class="btn btn-default"><?php echo bbp_get_reply_to_link(); ?></bottom>
 <?php endif; ?>
 <?php if ( !bbp_show_lead_topic() == bbp_is_topic(bbp_get_reply_id()) ) : ?>
-<bottom data-toggle="tooltip" data-placement="bottom" title="Add to favorites" class="btn btn-default" style="margin-right:4px;"><?php bbp_user_favorites_link(); ?></bottom>
+<bottom data-toggle="tooltip" data-placement="bottom" title="Dodaj u omiljene" class="btn btn-default"><?php bbp_user_favorites_link(); ?></bottom>
 <?php endif; ?>
 <div class="btn-group">
 <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-cog"></i></button>
