@@ -9,7 +9,7 @@
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/bbpress/style.css" type="text/css" media="screen">
 <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600&amp;subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
 <?php wp_head(); ?>
 </head>
@@ -24,22 +24,8 @@
 <a class="navbar-brand animated fadeInDown" id="limun" href="<?php echo esc_url(home_url()); ?>/forum" title="<?php bloginfo('description'); ?>"><?php bloginfo('name'); ?> Forum</a>
 </div>
 <div class="collapse navbar-collapse" id="meni">
-<ul class="nav navbar-nav pull-right">
-<form role="search" method="get" id="bbp-searchform" action="<?php echo esc_url( home_url( 'forum/' ) ); ?>" class="navbar-form navbar-left hidden-xs hidden-sm">
-<div class="form-group has-feedback has-feedback-left">
-<input data-toggle="tooltip" data-placement="bottom" title="Pronađite željenu temu" type="text" name="ts" id="ts" class="form-control" placeholder="Pretraga...">
-<span class="fa fa-search form-control-feedback" aria-hidden="true"></span>
-</div>
-</form>
-<div class="btn-group navbar-left hidden-xs hidden-sm" role="group">
-<button type="button" class="btn navbar-btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-bars"></i></button>
-<ul class="dropdown-menu dropdown-menu-right" role="menu">
-<li<?php if (is_single('generalno')) { echo ' class="active"'; } ?>><a href="<?php echo esc_url(home_url()); ?>/generalno"><i class="fa fa-desktop"></i> Generalno</a></li>
-<li class="divider"></li>
-<li<?php if (is_single('pomoc')) { echo ' class="active"'; } ?>><a href="<?php echo esc_url(home_url()); ?>/pomoc"><i class="fa fa-life-ring"></i> Pomoć</a></li>
-</ul>
-</div>
 <?php if (is_user_logged_in()) : ?>
+<ul class="nav navbar-nav pull-right">
 <a href="#new-post" class="zapocni btn navbar-btn navbar-right btn-success hidden-lg hidden-md">Započni temu</a>
 <li class="dropdown pull-right">
 <a href="#" class="dropdown-toggle navbar-gravatar" data-toggle="dropdown"> <?php global $current_user; get_currentuserinfo(); echo get_avatar($current_user->user_email, 32 ); ?></a>
@@ -50,13 +36,27 @@
 <li><a href="<?php echo wp_logout_url(); ?>"><i class="fa fa-sign-out"></i> Odjavi se</a></li>
 </ul>
 </li>
+</ul>
 <?php else : ?>
 <div class="btn-group pull-right navbar-btn" style="margin-left:15px;">
 <a class="btn btn-default" href="" data-toggle="modal" data-target="#prijava">Prijava</a>
 <a class="btn btn-success" href="" data-toggle="modal" data-target="#registracija">Registracija</a>
 </div>
 <?php endif; ?>
+<div class="btn-group pull-right hidden-xs hidden-sm" role="group">
+<button type="button" class="btn navbar-btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-bars"></i></button>
+<ul class="dropdown-menu dropdown-menu-right" role="menu">
+<li<?php if (is_single('generalno')) { echo ' class="active"'; } ?>><a href="<?php echo esc_url(home_url()); ?>/generalno"><i class="fa fa-desktop"></i> Generalno</a></li>
+<li class="divider"></li>
+<li<?php if (is_single('pomoc')) { echo ' class="active"'; } ?>><a href="<?php echo esc_url(home_url()); ?>/pomoc"><i class="fa fa-life-ring"></i> Pomoć</a></li>
 </ul>
+</div>
+<form role="search" method="get" id="bbp-searchform" action="<?php echo esc_url( home_url( 'forum/' ) ); ?>" class="navbar-form pull-right hidden-xs hidden-sm">
+<div class="form-group has-feedback has-feedback-left">
+<input data-toggle="tooltip" data-placement="bottom" title="Pronađite željenu temu" type="text" name="ts" id="ts" class="form-control" placeholder="Pretraga...">
+<span class="fa fa-search form-control-feedback" aria-hidden="true"></span>
+</div>
+</form>
 </div>
 </div>
 </nav>
@@ -70,9 +70,8 @@
 <?php echo get_avatar( bbp_get_displayed_user_field( 'user_email', 'raw' ), apply_filters( 'bbp_single_user_details_avatar_size', 100 ) ); ?>
 </a>
 </div>
-
 <bottom class="btn btn-danger pull-right" style="margin-top:10px;">
-<?php  printf( __( '%s', 'bbpress' ), bbp_get_user_display_role()    ); ?>
+<?php  printf( __( '%s', 'bbpress' ), bbp_get_user_display_role() ); ?>
 </bottom>
 <h1><?php bbp_displayed_user_field( 'display_name' ); ?></h1>
 <?php bbp_displayed_user_field( 'description' ); ?>
@@ -106,12 +105,13 @@
 </ul>
 </div>
 <div class="col-md-10">
-<article><?php the_content(); ?></article>
+<?php the_content(); ?>
 </div>
 <?php else : ?>
-<div class="col-md-12"><article><?php the_content(); ?></article></div>
+<div class="col-md-12"><?php the_content(); ?></div>
 <?php endif; ?>
 <div class="col-md-12"><div class="copyright text-right"><a href="http://www.sceko.com/" target="_blank" title="Izrada sajtova">Created by Sceko</a></div></div>
+</div>
 </div>
 <?php if (is_user_logged_in()) : ?>
 <?php else : ?>
@@ -120,7 +120,7 @@
 <div class="modal-content text-center">
 <div class="modal-header">
 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-<h4 class="modal-title text-center" id="prijava">Prijavi se</h4>
+<h4 class="modal-title text-center">Prijavi se</h4>
 </div>
 <div class="modal-body">
 <form name="login-form" role="form" action="<?php echo site_url( 'wp-login.php', 'login_post' ) ?>" method="post">
@@ -146,7 +146,7 @@
 <div class="modal-content text-center" style="width:335px;">
 <div class="modal-header">
 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-<h4 class="modal-title" id="registracija">Registruj se</h4>
+<h4 class="modal-title">Registruj se</h4>
 </div>
 <div class="modal-body">
 <form name="login-form" role="form" action="<?php echo site_url('wp-login.php?action=register', 'login_post') ?>" method="post">
@@ -156,9 +156,7 @@
 <div class="form-group">
 <input type="text" name="user_email" class="form-control" placeholder="E-pošta">
 </div>
-<p>
-<div class="bbp-template-notice" style="">Lozinka će vam biti poslata.</div>
-</p>
+<div class="bbp-template-notice"><p>Lozinka će vam biti poslata.</p></div>
 <button type="submit" name="user-submit" style="width:100%;" class="btn btn-primary">Završi registraciju</button>
 <input type="hidden" name="redirect_to" value="<?php echo $_SERVER['REQUEST_URI']; ?>?register=true" />
 <input type="hidden" name="user-cookie" value="1">

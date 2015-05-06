@@ -8,7 +8,6 @@
  */
 
 ?>
-
 <div id="bbpress-forums">
 <?php do_action( 'bbp_template_before_single_topic' ); ?>
 <?php if ( post_password_required() ) : ?>

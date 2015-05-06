@@ -32,10 +32,10 @@
 </div>
 </div>
 <div class="col-md-2">
-<span class="pull-right text-center hidden-xs hidden-sm">
-<span class="broj"><?php bbp_show_lead_topic() ? bbp_topic_reply_count() : bbp_topic_post_count(); ?></span><br>
-<p class="odgovora">odgovora<p>
-</span>
+<div class="pull-right text-center hidden-xs hidden-sm">
+<span class="broj"><?php bbp_show_lead_topic() ? bbp_topic_reply_count() : bbp_topic_post_count(); ?></span>
+<p class="odgovora">odgovora</p>
+</div>
 </div>
 </div>
 </li>

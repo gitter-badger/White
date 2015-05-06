@@ -7,7 +7,7 @@
  */
 ?>
 <?php if ( !bbp_is_single_forum() ) : ?>
-<div id="bbpress-forums">
+<!-- <div id="bbpress-forums"> -->
 <?php endif; ?>
 <?php if ( bbp_is_topic_edit() ) : ?>
 <?php bbp_topic_tag_list( bbp_get_topic_id() ); ?>
@@ -133,5 +133,5 @@ bbp_dropdown( array(
 </div>
 <?php endif; ?>
 <?php if ( !bbp_is_single_forum() ) : ?>
-</div>
+<!-- </div> -->
 <?php endif; ?>
