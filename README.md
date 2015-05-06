@@ -1,6 +1,4 @@
-# Pročitaj uputstvo
-
-<img src="http://i.pics.rs/G9NxG" alt="" class="img-thumbnail" />
+# Installation
 
 1) First download teme from https://github.com/Sceko/White/archive/master.zip
 2) After upload bbPress folder in your WordPress teme like /wp-content/themes/your-teme/[here]
@@ -66,3 +64,5 @@ add_action('wp_authenticate', 'login_email');
 </pre>
 
 Uputstvo na Srpskom: http://www.oklop.me/forum/tema/white-tema-za-bbpress/
+
+<img src="http://i.pics.rs/G9NxG" alt="" class="img-thumbnail" />
