@@ -1,9 +1,9 @@
 # Installation
 
-1) First download teme from https://github.com/Sceko/White/archive/master.zip
-2) After upload bbPress folder in your WordPress teme like /wp-content/themes/your-teme/[here]
-3) Now u most install plugin https://wordpress.org/plugins/bbpress-loadmore-topics/
-4) Change from /wp-admin/options-general.php?page=bbpress <strong>Forum Root</strong> to <strong>forum</strong> and <strong>Forum root should</strong> show to <strong>Topics by Freshness</strong> 
+1) First download teme from https://github.com/Sceko/White/archive/master.zip<br>
+2) After upload bbPress folder in your WordPress teme like /wp-content/themes/your-teme/[here]<br>
+3) Now u most install plugin https://wordpress.org/plugins/bbpress-loadmore-topics/<br>
+4) Change from /wp-admin/options-general.php?page=bbpress <strong>Forum Root</strong> to <strong>forum</strong> and <strong>Forum root should</strong> show to <strong>Topics by Freshness</strong><br>
 5) And last add this in your functions.php
 <pre>
 show_admin_bar(false);
