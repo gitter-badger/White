@@ -100,7 +100,7 @@
 <a href="#new-post" class="zapocni btn btn-success btn-block">Start a Discussion</a>
 <?php endif; ?>
 <li <?php if ( is_archive('forum')) { echo ' class="active"'; } ?>><a href="<?php echo esc_url(home_url()); ?>/forum"><i class="fa fa-comments-o"></i> All Discussions</a></li>
-<li <?php if ( bbp_is_single_view()) { echo ' class="active"'; } ?>><a href="<?php echo esc_url(home_url()); ?>/forum/view/no-replies/"><i class="fa fa-comment-o"></i> No Reply</a></li>
+<li <?php if ( bbp_is_single_view()) { echo ' class="active"'; } ?>><a href="<?php echo esc_url(home_url()); ?>/forum/view/no-replies/"><i class="fa fa-comment-o"></i> Unanswered</a></li>
 <li><a href="<?php echo bbp_get_user_profile_url( get_current_user_id() ); ?>favorites/" class="hidden-xs hidden-sm"><i class="fa fa-star"></i> Following</a></li>
 </ul>
 </div>
