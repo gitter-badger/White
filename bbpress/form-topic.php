@@ -37,7 +37,7 @@
 <?php bbp_get_template_part( 'form', 'anonymous' ); ?>
 <?php do_action( 'bbp_theme_before_topic_form_title' ); ?>
 <p>
-<input style="border:1px solid #ECF1F8;padding:6px 12px;border-radius:4px;" type="text" id="bbp_topic_title" placeholder="<?php printf( __( 'Naslov teme', 'bbpress' ), bbp_get_title_max_length() ); ?>" value="<?php bbp_form_topic_title(); ?>" tabindex="<?php bbp_tab_index(); ?>" size="50" name="bbp_topic_title" maxlength="<?php bbp_title_max_length(); ?>" />
+<input style="border:1px solid #ECF1F8;padding:6px 12px;border-radius:4px;" type="text" id="bbp_topic_title" placeholder="<?php printf( __( 'Discussion Title', 'bbpress' ), bbp_get_title_max_length() ); ?>" value="<?php bbp_form_topic_title(); ?>" tabindex="<?php bbp_tab_index(); ?>" size="50" name="bbp_topic_title" maxlength="<?php bbp_title_max_length(); ?>" />
 <?php if ( !bbp_is_single_forum() ) : ?>
 <?php do_action( 'bbp_theme_before_topic_form_forum' ); ?>
 <?php
@@ -109,7 +109,7 @@ bbp_dropdown( array(
 <?php do_action( 'bbp_theme_before_topic_form_submit_wrapper' ); ?>
 <div class="bbp-submit-wrapper">
 <?php do_action( 'bbp_theme_before_topic_form_submit_button' ); ?>
-<button type="submit" tabindex="<?php bbp_tab_index(); ?>" id="bbp_topic_submit" name="bbp_topic_submit" class="btn btn-success"><?php _e( 'Objavi temu', 'bbpress' ); ?></button>
+<button type="submit" tabindex="<?php bbp_tab_index(); ?>" id="bbp_topic_submit" name="bbp_topic_submit" class="btn btn-success"><?php _e( 'Submit', 'bbpress' ); ?></button>
 <?php do_action( 'bbp_theme_after_topic_form_submit_button' ); ?>
 </div>
 <?php do_action( 'bbp_theme_after_topic_form_submit_wrapper' ); ?>
