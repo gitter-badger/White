@@ -1,7 +1,7 @@
 # Installation
 
-1) Prvo preuymite temu sa https://github.com/Sceko/White/archive/srpski.zip<br>
-2) Uploadujte bbPress folder u vašu temu od WordPress /wp-content/themes/your-teme/[here]<br>
+1) Prvo preuzmite temu sa https://github.com/Sceko/White/archive/srpski.zip<br>
+2) Uploadujte bbPress folder u vašu temu koju koristine na WordPress /wp-content/themes/your-teme/[here]<br>
 3) Sada instalirajte dodatak https://wordpress.org/plugins/bbpress-loadmore-topics/<br>
 4) Izmenite iz /wp-admin/options-general.php?page=bbpress <strong>Forum Root</strong> u <strong>forum</strong> i <strong>Forum root should show</strong> u <strong>Topics by Freshness</strong><br>
 5) Dodajte sledeći kod u functions.php
