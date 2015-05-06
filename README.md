@@ -22,14 +22,14 @@ add_action( 'wp_enqueue_scripts', 'isa_dequeue_bbp_style', 99 );
 function closed_topics() {
    $topic_id = bbp_get_topic_id();
    if ( get_post_type( $topic_id ) == bbp_get_topic_post_type() && bbp_is_topic_closed( $topic_id ) )
-      echo '<i style="color:#ECF1F8;" class="glyphicon glyphicon-lock"></i>';
+      echo '<i style="color:#ECF1F8;" class="fa fa-lock"></i>';
 }
 add_action( 'bbp_theme_before_topic_title', 'closed_topics' );
- 
+
 function sticky_topics() {
    $topic_id = bbp_get_topic_id();
    if ( get_post_type( $topic_id ) == bbp_get_topic_post_type() && bbp_is_topic_sticky( $topic_id ) )
-      echo '<i style="color:#5CB85C;" class="glyphicon glyphicon-pushpin"></i>';
+      echo '<i style="color:#5CB85C;" class="fa fa-bullhorn"></i>';
 }
 add_action( 'bbp_theme_before_topic_title', 'sticky_topics' );
  
