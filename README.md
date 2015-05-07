@@ -39,10 +39,15 @@ function sticky_topics() {
 }
 add_action( 'bbp_theme_before_topic_title', 'sticky_topics' );
  
-function login_redirect( $redirect_to, $request, $user ) {
-  return home_url('forum');
+function redirect_login_users() {
+    global $user;
+    if (!is_admin()) {
+        return admin_url();
+    } else {
+        return home_url('forum');
+    } 
 }
-add_filter( 'login_redirect', 'login_redirect', 10, 3 );
+add_filter('login_redirect', 'redirect_login_users', 10);
  
 function redirect_non_admin_users() {
 if (!current_user_can('manage_options') && '/wp-admin/admin-ajax.php' != $_SERVER['PHP_SELF']) {
