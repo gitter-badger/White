@@ -59,6 +59,11 @@ function login_email($username) {
   return $username;
 }
 add_action('wp_authenticate', 'login_email');
+
+function remember_me() {
+    echo "<script>document.getElementById('rememberme').checked = true;</script>";
+}
+add_filter( 'login_footer', 'remember_me' );
 </pre>
 
 Uputstvo na Srpskom: http://www.oklop.me/forum/tema/white-tema-za-bbpress/
