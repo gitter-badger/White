@@ -1,5 +1,11 @@
 # Installation
 
+Forum use: 
+www.oklop.me/forum<br>
+www.limun.me/forum<br>
+www.allaboutdogs.net/forum/<br>
+If you use this teme send your web address on info@sceko.com
+
 1) First download teme from https://github.com/Sceko/White/archive/master.zip<br>
 2) After upload bbPress folder in your WordPress teme like /wp-content/themes/your-teme/[here]<br>
 3) Now u most install plugin https://wordpress.org/plugins/bbpress-loadmore-topics/<br>
