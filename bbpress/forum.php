@@ -131,6 +131,9 @@
 <div class="form-group">
 <input type="password" name="pwd" class="form-control" placeholder="Lozinka">
 </div>
+<div class="form-group">
+<label for="rememberme"><input name="rememberme" id="rememberme" type="checkbox" checked="checked" value="forever" /> Zapamti me</label>
+</div>
 <p>
 <a href="<?php echo wp_lostpassword_url(); ?>" title="Zaboravili ste lozinku?">Zaboravili ste lozinku?</a>
 </p>
