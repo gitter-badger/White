@@ -413,7 +413,8 @@ a.favorite-toggle {
   margin-right:10px;
 }
 
-.siva:hover {
+.siva:hover,
+.siva:focus {
   color:#fff;
 }
 
@@ -428,7 +429,8 @@ a.favorite-toggle {
   margin-right:10px;
 }
 
-.zelena:hover {
+.zelena:hover,
+.zelena:focus {
   color:#fff;
 }
 
@@ -443,7 +445,8 @@ a.favorite-toggle {
   margin-right:10px;
 }
 
-.crvena:hover {
+.crvena:hover,
+.crvena:focus {
   color:#fff;
 }
 
@@ -458,7 +461,8 @@ a.favorite-toggle {
   margin-right:10px;
 }
 
-.narandzasta:hover {
+.narandzasta:hover,
+.narandzasta:focus {
   color:#fff;
 }
 
