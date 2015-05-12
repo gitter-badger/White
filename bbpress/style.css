@@ -2,7 +2,7 @@
 html,
 body {
   font: 400 16px 'Open Sans', sans-serif;
-  color: #8FA2BC;
+  color: #8FA4BC;
   margin: 0;
   padding-top: 40px;
   height: 100%;
@@ -10,26 +10,26 @@ body {
 }
 
 a {
-  color: #8FA2BC;
+  color: #8FA4BC;
   text-decoration: none;
 }
 
 a:hover,
 a:focus {
-  color: #355B8E;
+  color: #536F90;
   text-decoration: none;
 }
 
 pre {
   background: #ECF1F8;
   border-color: #ECF1F8;
-  color: #8FA2BC;
+  color: #8FA4BC;
   padding: 10px;
 }
 
 code {
   background: #ECF1F8;
-  color: #8FA2BC;
+  color: #8FA4BC;
 }
 
 .img-thumbnail {
@@ -112,14 +112,14 @@ code {
 .open > .dropdown-toggle.btn-default {
   background: #ECF1F8;
   border-radius: 0px;
-  color: #8FA2BC;
+  color: #8FA4BC;
   cursor: pointer;
   border: 1px solid #ECF1F8;
   border-radius: 4px;
 }
 
 .btn-default:hover {
-  color: #8FA2BC;
+  color: #8FA4BC;
   background: #fff;
   border-color: #ECF1F8;
 }
@@ -131,18 +131,18 @@ code {
 .btn-primary:active,
 .btn-primary.active,
 .open > .dropdown-toggle.btn-primary {
-  background: #355B8E;
+  background: #536F90;
   border-radius: 0px;
   color: #fff;
   cursor: pointer;
-  border: 1px solid #355B8E;
+  border: 1px solid #536F90;
   border-radius: 4px;
 }
 
 .btn-primary:hover {
   color: #fff;
-  background: #2E4F7B;
-  border-color: #2E4F7B;
+  background: #4A6380;
+  border-color: #4A6380;
 }
 
 .btn-success,
@@ -152,18 +152,18 @@ code {
 .btn-success:active,
 .btn-success.active,
 .open > .dropdown-toggle.btn-success {
-  background: #5CB85C;
+  background: #80C15A;
   border-radius: 0px;
   color: #fff;
   cursor: pointer;
-  border: 1px solid #5CB85C;
+  border: 1px solid #80C15A;
   border-radius: 4px;
 }
 
 .btn-success:hover {
   color: #fff;
-  background: #449D44;
-  border-color: #449D44;
+  background: #73AD50;
+  border-color: #73AD50;
 }
 
 .btn-danger,
@@ -173,22 +173,22 @@ code {
 .btn-danger:active,
 .btn-danger.active,
 .open > .dropdown-toggle.btn-danger {
-  background: #61A378;
+  background: #fff;
   border-radius: 0px;
-  color: #fff;
+  color: #8FA4BC;
   cursor: pointer;
-  border: 1px solid #61A378;
+  border: 1px solid #ECF1F8;
   border-radius: 4px;
 }
 
 .btn-danger:hover {
-  color: #fff;
-  background: #61A378;
-  border-color: #61A378;
+  color: #8FA4BC;
+  background: #ECF1F8;
+  border-color: #ECF1F8;
 }
 
 .header {
-  background: #355B8E;
+  background: #536F90;
   margin-top: -10px;
   color: #fff;
   padding-top: 30px;
@@ -230,9 +230,35 @@ code {
   margin-bottom: 0px;
 }
 
+.naslov a {
+  font-weight:600;
+  color: #444;
+  font-size: 16px;
+}
+.naslov a:visited {
+  font-weight:300;
+}
+
+.naslov a:hover {
+  text-decoration: underline;
+}
+
+span.status {
+  position:absolute;
+  top:0px;
+  left:48px;
+  color:#fff;
+}
+
+span.broj {
+  font-weight: 600;
+  font-size: 18px;
+  color: #444;
+}
+
 p.odgovora {
-  color: #8FA2BC;
-  padding-top: 3px;
+  color: #8FA4BC;
+  padding-top: 5px;
   font-size: 11px;
   text-transform: uppercase;
 }
@@ -242,46 +268,26 @@ p.odgovora {
 }
 
 .ime a {
-  line-height: 40px;
   font-weight: 600;
   color: #444;
-  font-size: 16px;
-}
-
-.naslov a:visited {
-  color: #8FA2BC;
-}
-
-.naslov a {
-  line-height: 28px;
-  font-weight: 600;
-  color: #444;
-  font-size: 16px;
-}
-
-.naslov a:hover {
-  text-decoration: underline;
-}
-
-span.broj {
-  line-height: 34px;
-  font-weight: 600;
-  font-size: 18px;
-  color: #444;
-}
+  font-size: 16px;}
 
 .poruka {
-  word-wrap: break-word;
-  height: auto;
-  overflow: auto;
+  display:block;
+  margin-left:82px;
+  margin-top:12px;
+  width:auto;
+  height:auto;
   font-size: 16px;
   color: #444;
   font-weight: 400;
+  word-break: break-all;
 }
 
 .autor {
-  font-size: 14px;
-  color: #8FA2BC;
+  padding-top:5px;
+  font-size: 13px;
+  color: #8FA4BC;
 }
 
 .copyright {
@@ -299,37 +305,34 @@ span.broj {
 }
 
 .copyright a:hover {
-  color: #355B8E;
+  color: #536F90;
 }
 
 .statistika {
   background: #ECF1F8;
-  color: #8FA2BC;
+  color: #8FA4BC;
   border: 1px solid #ECF1F8;
   padding: 1px 6px;
 }
 
-.bbp-reply-to-link,
-.bbp-reply-to-link:hover {
-  color: #8FA2BC;
-}
-
 .bbp-topic-reply-link,
 .bbp-topic-reply-link:hover {
-  color: #8FA2BC;
+  color: #fff;
+}
+
+.bbp-reply-to-link,
+.bbp-reply-to-link:hover {
+  color: #8FA4BC;
 }
 
 #bbpress-forums .super-sticky {
-  color: #5CB85C;
 }
 
 #bbpress-forums .sticky {
-  color: #5CB85C;
 }
 
 #bbpress-forums .status-closed,
 #bbpress-forums .status-closed a {
-  color: #ECF1F8;
 }
 
 #new-post {
@@ -348,6 +351,7 @@ span.broj {
 
 a.favorite-toggle {
   font-size: 0px;
+  color:#8FA4BC;
 }
 
 #favorite-toggle .is-favorite a:before {
@@ -378,25 +382,103 @@ a.favorite-toggle {
 #bbp_forum_id,
 #bbp_stick_topic_select,
 #bbp_topic_status_select {
-  color: #8FA2BC;
+  color: #8FA4BC;
 }
 
 .new-topic-notifier {
+  margin-left:10px;
   display: inline;
-  padding: 2px 10px;
   font-size: 14px;
   font-weight: 600;
-  color: #fff;
-  line-height: 24px;
-  background: #E589A0;
+  color: #4E89DA;
   text-align: center;
   white-space: nowrap;
   vertical-align: baseline;
   border-radius: 4px;
+  text-transform: lowercase;
 }
 
 .modal-backdrop {
-  background: #355B8E;
+  background: #536F90;
+}
+
+.siva {
+  font-size:11px;
+  font-weight:600;
+  background: #96A2AF;
+  border-radius:4px;
+  padding:1px 4px;
+  color:#fff;
+  text-transform: uppercase;
+  margin-right:10px;
+}
+
+.siva:hover,
+.siva:focus {
+  color:#fff;
+}
+
+.zelena {
+  font-size:11px;
+  font-weight:600;
+  background: #80C15A;
+  border-radius:4px;
+  padding:1px 4px;
+  color:#fff;
+  text-transform: uppercase;
+  margin-right:10px;
+}
+
+.zelena:hover,
+.zelena:focus {
+  color:#fff;
+}
+
+.crvena {
+  font-size:11px;
+  font-weight:600;
+  background: #F56857;
+  border-radius:4px;
+  padding:1px 4px;
+  color:#fff;
+  text-transform: uppercase;
+  margin-right:10px;
+}
+
+.crvena:hover,
+.crvena:focus {
+  color:#fff;
+}
+
+.narandzasta {
+  font-size:11px;
+  font-weight:600;
+  background: #F59B66;
+  border-radius:4px;
+  padding:1px 4px;
+  color:#fff;
+  text-transform: uppercase;
+  margin-right:10px;
+}
+
+.narandzasta:hover,
+.narandzasta:focus {
+  color:#fff;
+}
+
+.plava {
+  font-size:11px;
+  font-weight:600;
+  background: #4E89DA;
+  border-radius:4px;
+  padding:1px 4px;
+  color:#fff;
+  text-transform: uppercase;
+  margin-right:10px;
+}
+
+.plava:hover {
+  color:#fff;
 }
 
 .alignnone {

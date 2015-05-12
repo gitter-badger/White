@@ -80,7 +80,7 @@
 <div class="bbp-submit-wrapper">
 <?php do_action( 'bbp_theme_before_reply_form_submit_button' ); ?>
 <?php bbp_cancel_reply_to_link(); ?>
-<button type="submit" tabindex="<?php bbp_tab_index(); ?>" id="bbp_reply_submit" name="bbp_reply_submit" class="btn btn-primary"><?php _e( 'Post Reply', 'bbpress' ); ?></button>
+<button type="submit" tabindex="<?php bbp_tab_index(); ?>" id="bbp_reply_submit" name="bbp_reply_submit" class="btn btn-primary"><?php _e( 'Post reply', 'bbpress' ); ?></button>
 <?php do_action( 'bbp_theme_after_reply_form_submit_button' ); ?>
 </div>
 <?php do_action( 'bbp_theme_after_reply_form_submit_wrapper' ); ?>

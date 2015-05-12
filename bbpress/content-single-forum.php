@@ -10,7 +10,7 @@
 ?>
 
 <div id="bbpress-forums">
-<!-- <?php bbp_forum_subscription_link(); ?> -->
+<?php bbp_forum_subscription_link(); ?>
 <?php do_action( 'bbp_template_before_single_forum' ); ?>
 <?php if ( post_password_required() ) : ?>
 <?php bbp_get_template_part( 'form', 'protected' ); ?>

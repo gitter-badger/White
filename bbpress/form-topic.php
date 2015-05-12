@@ -109,7 +109,11 @@ bbp_dropdown( array(
 <?php do_action( 'bbp_theme_before_topic_form_submit_wrapper' ); ?>
 <div class="bbp-submit-wrapper">
 <?php do_action( 'bbp_theme_before_topic_form_submit_button' ); ?>
-<button type="submit" tabindex="<?php bbp_tab_index(); ?>" id="bbp_topic_submit" name="bbp_topic_submit" class="btn btn-success"><?php _e( 'Submit', 'bbpress' ); ?></button>
+<?php if ( bbp_is_topic_edit() ) : ?>
+<button type="submit" tabindex="<?php bbp_tab_index(); ?>" id="bbp_topic_submit" name="bbp_topic_submit" class="btn btn-primary"><?php _e( 'Update', 'bbpress' ); ?></button>
+<?php else : ?>
+<button type="submit" tabindex="<?php bbp_tab_index(); ?>" id="bbp_topic_submit" name="bbp_topic_submit" class="btn btn-primary"><?php _e( 'Submit', 'bbpress' ); ?></button>
+<?php endif; ?>
 <?php do_action( 'bbp_theme_after_topic_form_submit_button' ); ?>
 </div>
 <?php do_action( 'bbp_theme_after_topic_form_submit_wrapper' ); ?>

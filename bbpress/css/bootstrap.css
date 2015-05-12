@@ -1372,7 +1372,7 @@ output {
   padding: 6px 12px;
   font-size: 14px;
   line-height: 1.42857143;
-  color: #8FA2BC;
+  color: #8FA4BC;
   background-color: #ECF1F8;
   background-image: none;
   border: 1px solid #ECF1F8;
@@ -1387,13 +1387,13 @@ output {
   background-color: #fff;
 }
 .form-control::-moz-placeholder {
-  color: #8FA2BC;
+  color: #8FA4BC;
 }
 .form-control:-ms-input-placeholder {
-  color: #8FA2BC;
+  color: #8FA4BC;
 }
 .form-control::-webkit-input-placeholder {
-  color: #8FA2BC;
+  color: #8FA4BC;
 }
 .form-control[disabled],
 .form-control[readonly],
@@ -2302,7 +2302,7 @@ tbody.collapse.in {
   color: #ffffff;
   text-decoration: none;
   outline: 0;
-  background-color: #337ab7;
+  background-color: #536F90;
 }
 .dropdown-menu > .disabled > a,
 .dropdown-menu > .disabled > a:hover,
@@ -2660,6 +2660,10 @@ tbody.collapse.in {
   padding-left: 0;
   margin-bottom: 0;
 }
+.nav-pills > li > a > i {
+  margin-right:10px;
+  font-size:16px;
+}
 .nav-pills > a {
   padding:6px 25px;
   font-weight:600;
@@ -2679,7 +2683,7 @@ tbody.collapse.in {
 .nav-pills > li.active > a:hover,
 .nav-pills > li.active > a:focus {
   font-weight:600;
-  color: #355B8E;
+  color: #536F90;
   background-color: transparent;
 }
 .nav-stacked > li {
@@ -3083,11 +3087,11 @@ tbody.collapse.in {
   border-color: #ECF1F8;
 }
 .navbar-default .navbar-brand {
-  color: #355B8E;
+  color: #536F90;
 }
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
-  color: #355B8E;
+  color: #536F90;
   background-color: transparent;
   text-decoration: underline;
 }
@@ -3095,11 +3099,11 @@ tbody.collapse.in {
   color: #777777;
 }
 .navbar-default .navbar-nav > li > a {
-  color: #8FA2BC;
+  color: #8FA4BC;
 }
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-  color: #355B8E;
+  color: #536F90;
   background-color: transparent;
 }
 .navbar-default .navbar-nav > .active > a,
@@ -3132,7 +3136,7 @@ tbody.collapse.in {
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:hover,
 .navbar-default .navbar-nav > .open > a:focus {
-    color: #8FA2BC;
+    color: #8FA4BC;
     background-color: transparent;
 }
 @media (max-width: 767px) {
