@@ -38,7 +38,7 @@ function white_stranica() {
 <?php do_settings_sections( 'white-settings' ); ?>
 <div class="row">
 <div class="col-md-6">
-    <label>Kategorije</label>
+    <label>Forumi</label>
     <p>Ovde unesite forume koje ste kreirali u vaš bbPress.</p>
     <input type="text" class="form-group form-control input-sm" id="white_kategorija_1" name="white_kategorija_1" value="<?php echo esc_attr( get_option('white_kategorija_1') ); ?>">
     <input type="text" class="form-group form-control input-sm" id="white_kategorija_2" name="white_kategorija_2" value="<?php echo esc_attr( get_option('white_kategorija_2') ); ?>">
