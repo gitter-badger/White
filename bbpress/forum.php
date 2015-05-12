@@ -13,6 +13,7 @@
 <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
 <?php wp_head(); ?>
 </head>
+<?php flush(); ?>
 <body>
 <nav class="navbar navbar-default navbar-fixed-top">
 <div class="container">
@@ -26,7 +27,7 @@
 <div class="collapse navbar-collapse" id="meni">
 <?php if (is_user_logged_in()) : ?>
 <ul class="nav navbar-nav pull-right">
-<a href="#new-post" class="zapocni btn navbar-btn navbar-right btn-success hidden-lg hidden-md">Započni temu</a>
+<a href="#new-post" class="zapocni btn navbar-btn navbar-right btn-primary hidden-lg hidden-md">Započni temu</a>
 <li class="dropdown pull-right">
 <a href="#" class="dropdown-toggle navbar-gravatar" data-toggle="dropdown"> <?php global $current_user; get_currentuserinfo(); echo get_avatar($current_user->user_email, 32 ); ?></a>
 <ul class="dropdown-menu" role="menu" >
@@ -43,16 +44,7 @@
 <a class="btn btn-success" href="" data-toggle="modal" data-target="#registracija">Registracija</a>
 </div>
 <?php endif; ?>
-
-<div class="btn-group pull-right hidden-xs hidden-sm" role="group">
-<button type="button" class="btn navbar-btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-bars"></i></button>
-<ul class="dropdown-menu dropdown-menu-right" role="menu">
-<li<?php if (is_single('generalno')) { echo ' class="active"'; } ?>><a href="<?php echo esc_url(home_url()); ?>/generalno"><i class="fa fa-desktop"></i> Generalno</a></li>
-<li class="divider"></li>
-<li<?php if (is_single('pomoc')) { echo ' class="active"'; } ?>><a href="<?php echo esc_url(home_url()); ?>/pomoc"><i class="fa fa-life-ring"></i> Pomoć</a></li>
-</ul>
-</div>
-<form role="search" method="get" id="bbp-searchform" action="<?php echo esc_url( home_url( 'forum/' ) ); ?>" class="navbar-form pull-right hidden-xs hidden-sm">
+<form role="search" method="get" id="bbp-searchform" action="<?php echo esc_url( home_url( 'forum/' ) ); ?>" class="navbar-form navbar-right hidden-xs hidden-sm">
 <div class="form-group has-feedback has-feedback-left">
 <input data-toggle="tooltip" data-placement="bottom" title="Pronađite željenu temu" type="text" name="ts" id="ts" class="form-control" placeholder="Pretraga...">
 <span class="fa fa-search form-control-feedback" aria-hidden="true"></span>
@@ -98,11 +90,33 @@
 <div class="col-md-2">
 <ul class="nav-pills nav-stacked hidden-xs hidden-sm" data-spy="affix">
 <?php if ( is_user_logged_in() ) : ?>
-<a href="#new-post" class="zapocni btn btn-success btn-block">Započni temu</a>
+<a href="#new-post" class="zapocni btn btn-primary btn-block">Započni temu</a>
 <?php endif; ?>
 <li <?php if ( is_archive('forum')) { echo ' class="active"'; } ?>><a href="<?php echo esc_url(home_url()); ?>/forum"><i class="fa fa-comments-o"></i> Poslednje teme</a></li>
 <li <?php if ( bbp_is_single_view()) { echo ' class="active"'; } ?>><a href="<?php echo esc_url(home_url()); ?>/forum/pregled/no-replies/"><i class="fa fa-comment-o"></i> Neodgovorene</a></li>
 <li><a href="<?php echo bbp_get_user_profile_url( get_current_user_id() ); ?>omiljene/" class="hidden-xs hidden-sm"><i class="fa fa-star"></i> Omiljene teme</a></li>
+<li></li>
+<?php if (get_option('white_kategorija_1')) : ?>
+<li<?php if (is_single(get_option(white_kategorija_1))) { echo ' class="active"'; } ?>><a href="<?php echo esc_url(home_url()); ?>/<?php echo sanitize_title(strtolower(get_option('white_kategorija_1'))); ?>">
+<i class="<?php echo get_option('white_boja_1'); ?>" style="float:left;width:16px;height:16px;margin-right:15px;margin-top:2px;"></i> <?php echo get_option('white_kategorija_1'); ?></a></li>
+<?php endif; ?>
+<?php if (get_option('white_kategorija_2')) : ?>
+<li<?php if (is_single(get_option(white_kategorija_2))) { echo ' class="active"'; } ?>><a href="<?php echo esc_url(home_url()); ?>/<?php echo sanitize_title(strtolower(get_option('white_kategorija_2'))); ?>">
+<i class="<?php echo get_option('white_boja_2'); ?>" style="float:left;width:16px;height:16px;margin-right:15px;margin-top:2px;"></i> <?php echo get_option('white_kategorija_2'); ?></a></li>
+<?php endif; ?>
+<?php if (get_option('white_kategorija_3')) : ?>
+<li<?php if (is_single(get_option(white_kategorija_3))) { echo ' class="active"'; } ?>><a href="<?php echo esc_url(home_url()); ?>/<?php echo sanitize_title(strtolower(get_option('white_kategorija_3'))); ?>">
+<i class="<?php echo get_option('white_boja_3'); ?>" style="float:left;width:16px;height:16px;margin-right:15px;margin-top:2px;"></i> <?php echo get_option('white_kategorija_3'); ?></a></li>
+<?php endif; ?>
+<?php if (get_option('white_kategorija_4')) : ?>
+<li<?php if (is_single(get_option(white_kategorija_4))) { echo ' class="active"'; } ?>><a href="<?php echo esc_url(home_url()); ?>/<?php echo sanitize_title(strtolower(get_option('white_kategorija_4'))); ?>">
+<i class="<?php echo get_option('white_boja_4'); ?>" style="float:left;width:16px;height:16px;margin-right:15px;margin-top:2px;"></i> <?php echo get_option('white_kategorija_4'); ?></a></li>
+<?php endif; ?>
+<?php if (get_option('white_kategorija_5')) : ?>
+<li<?php if (is_single(get_option(white_kategorija_5))) { echo ' class="active"'; } ?>><a href="<?php echo esc_url(home_url()); ?>/<?php echo sanitize_title(strtolower(get_option('white_kategorija_5'))); ?>">
+<i class="<?php echo get_option('white_boja_5'); ?>" style="float:left;width:16px;height:16px;margin-right:15px;margin-top:2px;"></i> <?php echo get_option('white_kategorija_5'); ?></a></li>
+<?php endif; ?>
+</ul>
 </ul>
 </div>
 <div class="col-md-10">
@@ -111,7 +125,7 @@
 <?php else : ?>
 <div class="col-md-12"><?php the_content(); ?></div>
 <?php endif; ?>
-<div class="col-md-12"><div class="copyright text-right"><a href="http://www.sceko.com/" target="_blank" title="Izrada sajtova">Created by Sceko</a></div></div>
+<div class="col-md-12"><div class="copyright text-right"><a href="<?php echo esc_url(home_url()); ?>/forum" title="Powered by bbPress">Powered by bbPress</a></div></div>
 </div>
 </div>
 <?php if (is_user_logged_in()) : ?>
@@ -174,6 +188,9 @@
 <script type="text/javascript">
 $(document).ready(
 function() {
+if(window.location.href.indexOf("#new-post") > -1) {
+$("#new-post").fadeToggle();
+}
 $(".bbp-topic-reply-link").click(function() {
 $("#new-post").fadeToggle();
 });
