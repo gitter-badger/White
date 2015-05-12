@@ -90,7 +90,7 @@
 <div class="col-md-2">
 <ul class="nav-pills nav-stacked hidden-xs hidden-sm" data-spy="affix">
 <?php if ( is_user_logged_in() ) : ?>
-<a href="#new-post" class="zapocni btn btn-primary btn-block">Započni temu</a>
+<a href="#new-post" class="zapocni btn btn-primary btn-block">Start a Discussion</a>
 <?php endif; ?>
 <li <?php if ( is_archive('forum')) { echo ' class="active"'; } ?>><a href="<?php echo esc_url(home_url()); ?>/forum"><i class="fa fa-comments-o"></i> All Discussions</a></li>
 <li <?php if ( bbp_is_single_view()) { echo ' class="active"'; } ?>><a href="<?php echo esc_url(home_url()); ?>/forum/view/no-replies/"><i class="fa fa-comment-o"></i> Unanswered</a></li>
