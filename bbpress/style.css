@@ -477,7 +477,8 @@ a.favorite-toggle {
   margin-right:10px;
 }
 
-.plava:hover {
+.plava:hover,
+.plava:focus {
   color:#fff;
 }
 
