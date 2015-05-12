@@ -402,7 +402,7 @@ a.favorite-toggle {
   background: #536F90;
 }
 
-.siva {
+.gray {
   font-size:11px;
   font-weight:600;
   background: #96A2AF;
@@ -413,12 +413,12 @@ a.favorite-toggle {
   margin-right:10px;
 }
 
-.siva:hover,
-.siva:focus {
+.gray:hover,
+.gray:focus {
   color:#fff;
 }
 
-.zelena {
+.green {
   font-size:11px;
   font-weight:600;
   background: #80C15A;
@@ -429,12 +429,12 @@ a.favorite-toggle {
   margin-right:10px;
 }
 
-.zelena:hover,
-.zelena:focus {
+.green:hover,
+.green:focus {
   color:#fff;
 }
 
-.crvena {
+.red {
   font-size:11px;
   font-weight:600;
   background: #F56857;
@@ -445,12 +445,12 @@ a.favorite-toggle {
   margin-right:10px;
 }
 
-.crvena:hover,
-.crvena:focus {
+.red:hover,
+.red:focus {
   color:#fff;
 }
 
-.narandzasta {
+.orange {
   font-size:11px;
   font-weight:600;
   background: #F59B66;
@@ -461,12 +461,12 @@ a.favorite-toggle {
   margin-right:10px;
 }
 
-.narandzasta:hover,
-.narandzasta:focus {
+.orange:hover,
+.orange:focus {
   color:#fff;
 }
 
-.plava {
+.blue {
   font-size:11px;
   font-weight:600;
   background: #4E89DA;
@@ -477,7 +477,8 @@ a.favorite-toggle {
   margin-right:10px;
 }
 
-.plava:hover {
+.blue:hover,
+.blue:focus {
   color:#fff;
 }
 

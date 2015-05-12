@@ -51,43 +51,43 @@ function white_stranica() {
     <p>Enter here the color for the forum that you entered on the left.</p>
     <select id="white_boja_1" name="white_boja_1" class="form-group form-control input-sm">
     <option value="<?php echo esc_attr( get_option('white_boja_1')); ?>">The selected color is: <?php echo ucfirst(esc_attr( get_option('white_boja_1')) ); ?></option>
-    <option value="siva">Gray</option>
-    <option value="zelena">Green</option>
-    <option value="plava">Blue</option>
-    <option value="crvena">Red</option>
-    <option value="narandzasta">Orange</option>
+    <option value="gray">Gray</option>
+    <option value="green">Green</option>
+    <option value="blue">Blue</option>
+    <option value="red">Red</option>
+    <option value="orange">Orange</option>
     </select>
     <select id="white_boja_2" name="white_boja_2" class="form-group form-control input-sm">
    <option value="<?php echo esc_attr( get_option('white_boja_2')); ?>">The selected color is: <?php echo ucfirst(esc_attr( get_option('white_boja_2')) ); ?></option>
-    <option value="siva">Gray</option>
-    <option value="zelena">Green</option>
-    <option value="plava">Blue</option>
-    <option value="crvena">Red</option>
-    <option value="narandzasta">Orange</option>
+    <option value="gray">Gray</option>
+    <option value="green">Green</option>
+    <option value="blue">Blue</option>
+    <option value="red">Red</option>
+    <option value="orange">Orange</option>
     </select>
     <select id="white_boja_3" name="white_boja_3" class="form-group form-control input-sm">
     <option value="<?php echo esc_attr( get_option('white_boja_3')); ?>">The selected color is: <?php echo ucfirst(esc_attr( get_option('white_boja_3')) ); ?></option>
-    <option value="siva">Gray</option>
-    <option value="zelena">Green</option>
-    <option value="plava">Blue</option>
-    <option value="crvena">Red</option>
-    <option value="narandzasta">Orange</option>
+    <option value="gray">Gray</option>
+    <option value="green">Green</option>
+    <option value="blue">Blue</option>
+    <option value="red">Red</option>
+    <option value="orange">Orange</option>
     </select>
     <select id="white_boja_4" name="white_boja_4" class="form-group form-control input-sm">
     <option value="<?php echo esc_attr( get_option('white_boja_4')); ?>">The selected color is: <?php echo ucfirst(esc_attr( get_option('white_boja_4')) ); ?></option>
-    <option value="siva">Gray</option>
-    <option value="zelena">Green</option>
-    <option value="plava">Blue</option>
-    <option value="crvena">Red</option>
-    <option value="narandzasta">Orange</option>
+    <option value="gray">Gray</option>
+    <option value="green">Green</option>
+    <option value="blue">Blue</option>
+    <option value="red">Red</option>
+    <option value="orange">Orange</option>
     </select>
     <select id="white_boja_5" name="white_boja_5" class="form-group form-control input-sm">
     <option value="<?php echo esc_attr( get_option('white_boja_5')); ?>">The selected color is: <?php echo ucfirst(esc_attr( get_option('white_boja_5')) ); ?></option>
-    <option value="siva">Gray</option>
-    <option value="zelena">Green</option>
-    <option value="plava">Blue</option>
-    <option value="crvena">Red</option>
-    <option value="narandzasta">Orange</option>
+    <option value="gray">Gray</option>
+    <option value="green">Green</option>
+    <option value="blue">Blue</option>
+    <option value="red">Red</option>
+    <option value="orange">Orange</option>
     </select>
 </div>
 </div>
