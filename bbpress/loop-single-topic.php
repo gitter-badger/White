@@ -29,27 +29,21 @@
 </div>
 <div class="autor">
 <?php if ( !bbp_is_single_forum()) : ?>
-
 <?php if (bbp_get_topic_forum_title() == get_option('white_kategorija_1')) : ?>
 <?php printf( __( '<a class="%3$s" href="%1$s">%2$s</a>', 'bbpress' ), bbp_get_forum_permalink( bbp_get_topic_forum_id() ), bbp_get_forum_title( bbp_get_topic_forum_id() ), get_option('white_boja_1') ); ?>
 <?php endif; ?>
-
 <?php if (bbp_get_topic_forum_title() == get_option('white_kategorija_2')) : ?>
 <?php printf( __( '<a class="%3$s" href="%1$s">%2$s</a>', 'bbpress' ), bbp_get_forum_permalink( bbp_get_topic_forum_id() ), bbp_get_forum_title( bbp_get_topic_forum_id() ), get_option('white_boja_2') ); ?>
 <?php endif; ?>
-
 <?php if (bbp_get_topic_forum_title() == get_option('white_kategorija_3')) : ?>
 <?php printf( __( '<a class="%3$s" href="%1$s">%2$s</a>', 'bbpress' ), bbp_get_forum_permalink( bbp_get_topic_forum_id() ), bbp_get_forum_title( bbp_get_topic_forum_id() ), get_option('white_boja_3') ); ?>
 <?php endif; ?>
-
 <?php if (bbp_get_topic_forum_title() == get_option('white_kategorija_4')) : ?>
 <?php printf( __( '<a class="%3$s" href="%1$s">%2$s</a>', 'bbpress' ), bbp_get_forum_permalink( bbp_get_topic_forum_id() ), bbp_get_forum_title( bbp_get_topic_forum_id() ), get_option('white_boja_4') ); ?>
 <?php endif; ?>
-
 <?php if (bbp_get_topic_forum_title() == get_option('white_kategorija_5')) : ?>
 <?php printf( __( '<a class="%3$s" href="%1$s">%2$s</a>', 'bbpress' ), bbp_get_forum_permalink( bbp_get_topic_forum_id() ), bbp_get_forum_title( bbp_get_topic_forum_id() ), get_option('white_boja_5') ); ?>
 <?php endif; ?>
-
 <?php endif; ?>
 <span style="font-weight:600;"><?php bbp_author_link( array( 'post_id' => bbp_get_topic_last_active_id(), 'show_role' => false, 'type' => 'name' ) ); ?></span> pre <?php bbp_topic_freshness_link(); ?> 
 </div>
