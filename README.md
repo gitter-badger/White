@@ -1,5 +1,7 @@
 # Installation
 
+[![Join the chat at https://gitter.im/Sceko/White](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/Sceko/White?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Who is using this teme:<br>
 www.oklop.me/forum<br>
 www.limun.me/forum<br>
